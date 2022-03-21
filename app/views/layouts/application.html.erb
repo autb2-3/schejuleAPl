@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scapl</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+    <header>
+      <h3>Ruby on Rails スケジュール管理アプリ</h3>
+    </header>
+    <%= yield %>
+    <footer>
+      <h3>現在の日時 : <span id="today"></span></h3>
+    </footer>
+  </body>
+  <script>
+  var today=new Date(); 
+
+//年・月・日・曜日を取得
+var year = today.getFullYear();
+var month = today.getMonth()+1;
+var week = today.getDay();
+var day = today.getDate();
+
+var week_ja= new Array("日","月","火","水","木","金","土");
+
+//年・月・日・曜日を書き出す
+document.write(year+"年"+month+"月"+day+"日 "+week_ja[week]+"曜日");
+</script>
+</html>
+
+
