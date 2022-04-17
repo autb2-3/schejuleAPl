@@ -61,3 +61,7 @@ gem 'pry-rails'
 gem 'ransack'
 gem 'webpacker','~> 5.0'
 gem 'rspec-rails', '~> 4.0.1'
+
+group :production do
+  gem 'pg'
+end
